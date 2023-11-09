@@ -12,10 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('spp',function(Blueprint $table){
-            $table->integer('id_spp');
+            $table->integer('id_spp')->autoIncrement();
             $table->integer('tahun');
             $table->integer('nominal');
             $table->timestamps();
+      
         });
     }
 

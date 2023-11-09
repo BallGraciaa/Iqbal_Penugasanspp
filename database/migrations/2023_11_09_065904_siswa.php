@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('no_telp',13);
             $table->integer('id_spp');
             $table->timestamps();
+           
         });
     }
     /**
