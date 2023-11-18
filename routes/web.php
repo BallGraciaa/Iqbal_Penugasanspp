@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\admin;
 use App\Http\Controllers\siswa;
+use App\Http\Controllers\admin;
+use App\Http\Controllers\siswa;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//admin
 //admin
 Route::get('/', function () {
     return view('admin.layoutadmin');
