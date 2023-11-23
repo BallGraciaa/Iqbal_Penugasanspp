@@ -39,34 +39,18 @@
         <div class="sidebar-body">
             <ul class="sidebar-body-menu">
                 <li>
-                    <a class="active" href="/"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
+                    <a class="active" href="{{url('utama')}}"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
                 </li>
                 <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon document" aria-hidden="true"></span>Data Siswa
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
+                    <a class="active" href="{{url('datasiswa')}}"><span class="icon document" aria-hidden="true"></span>Data Siswa</a>
+                </li>
+                <li>  
+                    <li>
+                        <a class="active" href="{{url('petugas')}}"><span class="icon folder" aria-hidden="true"></span>Data Petugas</a>
+                    </li>
                 </li>
                 <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon folder" aria-hidden="true"></span>Data Petugas
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon image" aria-hidden="true"></span>Data Kelas
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
+                    <a class="active" href="{{url('kelas')}}"><span class="icon image" aria-hidden="true"></span>Kelas</a>
                 </li>
                 <li>
                     <a class="show-cat-btn" href="##">
@@ -77,21 +61,14 @@
                         </span>
                     </a>
                 </li>
+                <li>
+                    <a class="active" href="{{url('transaksi')}}"><span class="icon image" aria-hidden="true"></span>Transaksi</a>
+                </li>
             </ul>
             
             <ul class="sidebar-body-menu">
-                <li>
-                    <a href="appearance.html"><span class="icon edit" aria-hidden="true"></span>Transaksi</a>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon category" aria-hidden="true"></span>history
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
-                </li>
+               
+              
                 <li>
                     <a href="##"><span class="icon setting" aria-hidden="true"></span>Generate Laporan</a>
                 </li>

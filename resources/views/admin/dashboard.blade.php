@@ -38,34 +38,17 @@
         <div class="sidebar-body">
             <ul class="sidebar-body-menu">
                 <li>
-                    <a class="active" href="/"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
+                    <a class="active" href="{{url('utama')}}"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
                 </li>
                 <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon document" aria-hidden="true"></span>Data Siswa
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
+                
+                    <a class="active" href="{{url('datasiswa')}}"><span class="icon document" aria-hidden="true"></span>Data Siswa</a>
                 </li>
                 <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon folder" aria-hidden="true"></span>Data Petugas
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
-                </li>
+                    <a class="active" href="{{url('petugas')}}"><span class="icon folder" aria-hidden="true"></span>Data Petugas</a>
                 <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon image" aria-hidden="true"></span>Data Kelas
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
+                 
+                    <a class="active" href="{{url('kelas')}}"><span class="icon image" aria-hidden="true"></span>Kelas</a>
                 </li>
                 <li>
                     <a class="show-cat-btn" href="##">
@@ -80,16 +63,17 @@
             
             <ul class="sidebar-body-menu">
                 <li>
-                    <a href="appearance.html"><span class="icon edit" aria-hidden="true"></span>Transaksi</a>
+                    <a href="{{url('transaksi')}}"><span class="icon edit" aria-hidden="true"></span>Transaksi</a>
                 </li>
                 <li>
-                    <a class="show-cat-btn" href="##">
+                    {{-- <a class="show-cat-btn" href="##">
                         <span class="icon category" aria-hidden="true"></span>history
                         <span class="category__btn transparent-btn" title="Open list">
                             <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
+                            <span class="icon arrow-down" aria-hidden="true"></span>
                         </span>
-                    </a>
+                    </a> --}}
+                    <a href="{{url('transaksi')}}"><span class="icon edit" aria-hidden="true"></span>History</a>
                 </li>
                 <li>
                     <a href="##"><span class="icon setting" aria-hidden="true"></span>Generate Laporan</a>
@@ -222,11 +206,11 @@
                 <i data-feather="bar-chart-2" aria-hidden="true"></i>
               </div>
               <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
+                <p class="stat-cards-info__num">147.200.000.000</p>
+                <p class="stat-cards-info__title">Total Uang masuk</p>
                 <p class="stat-cards-info__progress">
                   <span class="stat-cards-info__profit success">
-                    <i data-feather="trending-up" aria-hidden="true"></i>4.07%
+                    <i data-feather="trending-up" aria-hidden="true"></i>9.07%
                   </span>
                   Last month
                 </p>
@@ -239,8 +223,8 @@
                 <i data-feather="file" aria-hidden="true"></i>
               </div>
               <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
+                <p class="stat-cards-info__num">100.100.000.000</p>
+                <p class="stat-cards-info__title">Total Uang Keluar</p>
                 <p class="stat-cards-info__progress">
                   <span class="stat-cards-info__profit success">
                     <i data-feather="trending-up" aria-hidden="true"></i>0.24%
@@ -256,11 +240,11 @@
                 <i data-feather="file" aria-hidden="true"></i>
               </div>
               <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
+                <p class="stat-cards-info__num">100.000</p>
+                <p class="stat-cards-info__title">Siswa Yang udah Bayar</p>
                 <p class="stat-cards-info__progress">
-                  <span class="stat-cards-info__profit danger">
-                    <i data-feather="trending-down" aria-hidden="true"></i>1.64%
+                  <span class="stat-cards-info__profit success">
+                    <i data-feather="trending-up" aria-hidden="true"></i>7.64%
                   </span>
                   Last month
                 </p>
@@ -273,11 +257,11 @@
                 <i data-feather="feather" aria-hidden="true"></i>
               </div>
               <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
+                <p class="stat-cards-info__num">300.000</p>
                 <p class="stat-cards-info__title">Total visits</p>
                 <p class="stat-cards-info__progress">
-                  <span class="stat-cards-info__profit warning">
-                    <i data-feather="trending-up" aria-hidden="true"></i>0.00%
+                  <span class="stat-cards-info__profit success">
+                    <i data-feather="trending-up" aria-hidden="true"></i>10.00%
                   </span>
                   Last month
                 </p>
@@ -293,324 +277,31 @@
             <div class="users-table table-wrapper">
               <table class="posts-table">
                 <thead>
-                  <tr class="users-table-info">
-                    <th>
-                      <label class="users-table__checkbox ms-20">
-                        <input type="checkbox" class="check-all">Thumbnail
-                      </label>
-                    </th>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Status</th>
-                    <th>Date</th>
-                    <th>Action</th>
-                  </tr>
+                    <tr class="users-table-info">
+                        <th>NIS</th>
+                        <th>TANGGAL BAYAR</th>
+                        <th>BULAN DIBAYAR</th>
+                        <th>TAHUN DIBAYAR</th>
+                        <th>ID SPP</th>
+                        <th>JUMLAH BAYAR</th>
+                    </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <label class="users-table__checkbox">
-                        <input type="checkbox" class="check">
-                        <div class="categories-table-img">
-                          <picture><source srcset="assett/img/categories/01.webp" type="assett/image/webp"><img src="assett/img/categories/01.jpg" alt="category"></picture>
-                        </div>
-                      </label>
-                    </td>
-                    <td>
-                      Starting your traveling blog with Vasco
-                    </td>
-                    <td>
-                      <div class="pages-table-img">
-                        <picture><source srcset="assett/img/avatar/avatar-face-04.webp" type="assett/image/webp"><img src="assett/img/avatar/avatar-face-04.png" alt="User Name"></picture>
-                        Jenny Wilson
-                      </div>
-                    </td>
-                    <td><span class="badge-pending">Pending</span></td>
-                    <td>17.04.2021</td>
-                    <td>
-                      <span class="p-relative">
-                        <button class="dropdown-btn transparent-btn" type="button" title="More info">
-                          <div class="sr-only">More info</div>
-                          <i data-feather="more-horizontal" aria-hidden="true"></i>
-                        </button>
-                        <ul class="users-item-dropdown dropdown">
-                          <li><a href="##">Edit</a></li>
-                          <li><a href="##">Quick edit</a></li>
-                          <li><a href="##">Trash</a></li>
-                        </ul>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="users-table__checkbox">
-                        <input type="checkbox" class="check">
-                        <div class="categories-table-img">
-                          <picture><source srcset="assett/img/categories/02.webp" type="assett/image/webp"><img src="assett/img/categories/02.jpg" alt="category"></picture>
-                        </div>
-                      </label>
-                    </td>
-                    <td>
-                      Start a blog to reach your creative peak
-                    </td>
-                    <td>
-                      <div class="pages-table-img">
-                        <picture><source srcset="assett/img/avatar/avatar-face-03.webp" type="assett/image/webp"><img src="assett/img/avatar/avatar-face-03.png" alt="User Name"></picture>
-                        Annette Black
-                      </div>
-                    </td>
-                    <td><span class="badge-pending">Pending</span></td>
-                    <td>23.04.2021</td>
-                    <td>
-                      <span class="p-relative">
-                        <button class="dropdown-btn transparent-btn" type="button" title="More info">
-                          <div class="sr-only">More info</div>
-                          <i data-feather="more-horizontal" aria-hidden="true"></i>
-                        </button>
-                        <ul class="users-item-dropdown dropdown">
-                          <li><a href="##">Edit</a></li>
-                          <li><a href="##">Quick edit</a></li>
-                          <li><a href="##">Trash</a></li>
-                        </ul>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="users-table__checkbox">
-                        <input type="checkbox" class="check">
-                        <div class="categories-table-img">
-                          <picture><source srcset="assett/img/categories/03.webp" type="assett/image/webp"><img src="assett/img/categories/03.jpg" alt="category"></picture>
-                        </div>
-                      </label>
-                    </td>
-                    <td>
-                      Helping a local business reinvent itself
-                    </td>
-                    <td>
-                      <div class="pages-table-img">
-                        <picture><source srcset="assett/img/avatar/avatar-face-02.webp" type="image/webp"><img src="assett/img/avatar/avatar-face-02.png" alt="User Name"></picture>
-                        Kathryn Murphy
-                      </div>
-                    </td>
-                    <td><span class="badge-active">Active</span></td>
-                    <td>17.04.2021</td>
-                    <td>
-                      <span class="p-relative">
-                        <button class="dropdown-btn transparent-btn" type="button" title="More info">
-                          <div class="sr-only">More info</div>
-                          <i data-feather="more-horizontal" aria-hidden="true"></i>
-                        </button>
-                        <ul class="users-item-dropdown dropdown">
-                          <li><a href="##">Edit</a></li>
-                          <li><a href="##">Quick edit</a></li>
-                          <li><a href="##">Trash</a></li>
-                        </ul>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="users-table__checkbox">
-                        <input type="checkbox" class="check">
-                        <div class="categories-table-img">
-                          <picture><source srcset="assett/img/categories/04.webp" type="assettimage/webp"><img src="assett/img/categories/04.jpg" alt="category"></picture>
-                        </div>
-                      </label>
-                    </td>
-                    <td>
-                      Caring is the new marketing
-                    </td>
-                    <td>
-                      <div class="pages-table-img">
-                        <picture><source srcset="assett/img/avatar/avatar-face-05.webp" type="assett/image/webp"><img src="assett/img/avatar/avatar-face-05.png" alt="User Name"></picture>
-                        Guy Hawkins
-                      </div>
-                    </td>
-                    <td><span class="badge-active">Active</span></td>
-                    <td>17.04.2021</td>
-                    <td>
-                      <span class="p-relative">
-                        <button class="dropdown-btn transparent-btn" type="button" title="More info">
-                          <div class="sr-only">More info</div>
-                          <i data-feather="more-horizontal" aria-hidden="true"></i>
-                        </button>
-                        <ul class="users-item-dropdown dropdown">
-                          <li><a href="##">Edit</a></li>
-                          <li><a href="##">Quick edit</a></li>
-                          <li><a href="##">Trash</a></li>
-                        </ul>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="users-table__checkbox">
-                        <input type="checkbox" class="check">
-                        <div class="categories-table-img">
-                          <picture><source srcset="assett/img/categories/01.webp" type="assett/image/webp"><img src="assett/img/categories/01.jpg" alt="category"></picture>
-                        </div>
-                      </label>
-                    </td>
-                    <td>
-                      How to build a loyal community online and offline
-                    </td>
-                    <td>
-                      <div class="pages-table-img">
-                        <picture><source srcset="assett/img/avatar/avatar-face-03.webp" type="assett/image/webp"><img src="assett/img/avatar/avatar-face-03.png" alt="User Name"></picture>
-                        Robert Fox
-                      </div>
-                    </td>
-                    <td><span class="badge-active">Active</span></td>
-                    <td>17.04.2021</td>
-                    <td>
-                      <span class="p-relative">
-                        <button class="dropdown-btn transparent-btn" type="button" title="More info">
-                          <div class="sr-only">More info</div>
-                          <i data-feather="more-horizontal" aria-hidden="true"></i>
-                        </button>
-                        <ul class="users-item-dropdown dropdown">
-                          <li><a href="##">Edit</a></li>
-                          <li><a href="##">Quick edit</a></li>
-                          <li><a href="##">Trash</a></li>
-                        </ul>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="users-table__checkbox">
-                        <input type="checkbox" class="check">
-                        <div class="categories-table-img">
-                          <picture><source srcset="assett/img/categories/03.webp" type="assett/image/webp"><img src="assett/img/categories/03.jpg" alt="category"></picture>
-                        </div>
-                      </label>
-                    </td>
-                    <td>
-                      How to build a loyal community online and offline
-                    </td>
-                    <td>
-                      <div class="pages-table-img">
-                        <picture><source srcset="assett/img/avatar/avatar-face-03.webp" type="assett/image/webp"><img src="assett/img/avatar/avatar-face-03.png" alt="User Name"></picture>
-                        Robert Fox
-                      </div>
-                    </td>
-                    <td><span class="badge-active">Active</span></td>
-                    <td>17.04.2021</td>
-                    <td>
-                      <span class="p-relative">
-                        <button class="dropdown-btn transparent-btn" type="button" title="More info">
-                          <div class="sr-only">More info</div>
-                          <i data-feather="more-horizontal" aria-hidden="true"></i>
-                        </button>
-                        <ul class="users-item-dropdown dropdown">
-                          <li><a href="##">Edit</a></li>
-                          <li><a href="##">Quick edit</a></li>
-                          <li><a href="##">Trash</a></li>
-                        </ul>
-                      </span>
-                    </td>
-                  </tr>
+                    @foreach ($wg as $inem)
+                        <tr>
+                            <td>{{ $inem->nis}}</td>
+                            <td>{{ $inem->tanggal_bayar}}</td>
+                            <td>{{ $inem->bulan_dibayar }}</td>
+                            <td>{{ $inem->tahun_dibayar }}</td>
+                            <td>{{ $inem->id_spp }}</td>
+                            <td>{{ $inem->jumlah_bayar }}</td>
+                        </tr>
+                    @endforeach
                 </tbody>
-              </table>
+            </table>
             </div>
           </div>
           <div class="col-lg-3">
-            <article class="customers-wrapper">
-              <canvas id="customersChart" aria-label="Customers statistics" role="img"></canvas>
-              <!--              <p class="customers__title">New Customers <span>+958</span></p>
-              <p class="customers__date">28 Daily Avg.</p>
-              <picture><source srcset="./img/svg/customers.svg" type="image/webp"><img src="./img/svg/customers.svg" alt=""></picture> -->
-            </article>
-            <article class="white-block">
-              <div class="top-cat-title">
-                <h3>Top categories</h3>
-                <p>28 Categories, 1400 Posts</p>
-              </div>
-              <ul class="top-cat-list">
-                <li>
-                  <a href="##">
-                    <div class="top-cat-list__title">
-                      Lifestyle <span>8.2k</span>
-                    </div>
-                    <div class="top-cat-list__subtitle">
-                      Dailiy lifestyle articles <span class="purple">+472</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="##">
-                    <div class="top-cat-list__title">
-                      Tutorials <span>8.2k</span>
-                    </div>
-                    <div class="top-cat-list__subtitle">
-                      Coding tutorials <span class="blue">+472</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="##">
-                    <div class="top-cat-list__title">
-                      Technology <span>8.2k</span>
-                    </div>
-                    <div class="top-cat-list__subtitle">
-                      Dailiy technology articles <span class="danger">+472</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="##">
-                    <div class="top-cat-list__title">
-                      UX design <span>8.2k</span>
-                    </div>
-                    <div class="top-cat-list__subtitle">
-                      UX design tips <span class="success">+472</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="##">
-                    <div class="top-cat-list__title">
-                      Interaction tips <span>8.2k</span>
-                    </div>
-                    <div class="top-cat-list__subtitle">
-                      Interaction articles <span class="warning">+472</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="##">
-                    <div class="top-cat-list__title">
-                      App development <span>8.2k</span>
-                    </div>
-                    <div class="top-cat-list__subtitle">
-                      Mobile development articles <span class="warning">+472</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="##">
-                    <div class="top-cat-list__title">
-                      Nature <span>8.2k</span>
-                    </div>
-                    <div class="top-cat-list__subtitle">
-                      Wildlife animal articles <span class="warning">+472</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="##">
-                    <div class="top-cat-list__title">
-                      Geography <span>8.2k</span>
-                    </div>
-                    <div class="top-cat-list__subtitle">
-                      Geography articles <span class="primary">+472</span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </article>
-          </div>
         </div>
       </div>
     </main>

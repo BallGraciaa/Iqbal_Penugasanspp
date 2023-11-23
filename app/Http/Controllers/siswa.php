@@ -11,7 +11,7 @@ class siswa extends Controller
     public function tampilantable()
     {
         $m = new pembayaran();
-        return view('siswa.dashboardsiswa', ['wg' => $m->all()]);
+        return view('siswa.history', ['wg' => $m->all()]);
     }
 
     public function laporan()
@@ -41,5 +41,8 @@ public function tambah(request $request){
 
 public function tampilan(Request $request){
     return view("siswa.dashboardsiswa");
+}
+public function login(){
+    return view('siswa.loginsiswa');
 }
 }

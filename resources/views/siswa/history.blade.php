@@ -26,7 +26,7 @@
                 <span class="icon logo" aria-hidden="true"></span>
                 <div class="logo-text">
                     <span class="logo-title">BallGracia</span>
-                    <span class="logo-subtitle">Dashboard</span>
+                    <span class="logo-subtitle">History</span>
                 </div>
 
             </a>
@@ -38,63 +38,12 @@
         <div class="sidebar-body">
             <ul class="sidebar-body-menu">
                 <li>
-                    <a class="active" href="/"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
+                    {{-- <a class="active" href="/"><span class="icon home" aria-hidden="true"></span> </a> --}}
                 </li>
-                <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon document" aria-hidden="true"></span>Data Siswa
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon folder" aria-hidden="true"></span>Data Petugas
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon image" aria-hidden="true"></span>Data Kelas
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon paper" aria-hidden="true"></span>Data Spp
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
-                </li>
+              
             </ul>
             
-            <ul class="sidebar-body-menu">
-                <li>
-                    <a href="appearance.html"><span class="icon edit" aria-hidden="true"></span>Transaksi</a>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon category" aria-hidden="true"></span>history
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="##"><span class="icon setting" aria-hidden="true"></span>Generate Laporan</a>
-                </li>
-            </ul>
+          
         </div>
     </div>
     <div class="sidebar-footer">
@@ -214,82 +163,16 @@
     <!-- ! Main -->
     <main class="main users chart-page" id="skip-target">
       <div class="container">
-        <h2 class="main-title">Dashboard</h2>
+        <h2 class="main-title">History Pembayaran</h2>
         <div class="row stat-cards">
           <div class="col-md-6 col-xl-3">
-            <article class="stat-cards-item">
-              <div class="stat-cards-icon primary">
-                <i data-feather="bar-chart-2" aria-hidden="true"></i>
-              </div>
-              <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
-                <p class="stat-cards-info__progress">
-                  <span class="stat-cards-info__profit success">
-                    <i data-feather="trending-up" aria-hidden="true"></i>4.07%
-                  </span>
-                  Last month
-                </p>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-xl-3">
-            <article class="stat-cards-item">
-              <div class="stat-cards-icon warning">
-                <i data-feather="file" aria-hidden="true"></i>
-              </div>
-              <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
-                <p class="stat-cards-info__progress">
-                  <span class="stat-cards-info__profit success">
-                    <i data-feather="trending-up" aria-hidden="true"></i>0.24%
-                  </span>
-                  Last month
-                </p>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-xl-3">
-            <article class="stat-cards-item">
-              <div class="stat-cards-icon purple">
-                <i data-feather="file" aria-hidden="true"></i>
-              </div>
-              <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
-                <p class="stat-cards-info__progress">
-                  <span class="stat-cards-info__profit danger">
-                    <i data-feather="trending-down" aria-hidden="true"></i>1.64%
-                  </span>
-                  Last month
-                </p>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-xl-3">
-            <article class="stat-cards-item">
-              <div class="stat-cards-icon success">
-                <i data-feather="feather" aria-hidden="true"></i>
-              </div>
-              <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
-                <p class="stat-cards-info__progress">
-                  <span class="stat-cards-info__profit warning">
-                    <i data-feather="trending-up" aria-hidden="true"></i>0.00%
-                  </span>
-                  Last month
-                </p>
-              </div>
-            </article>
+         
+       
           </div>
         </div>
         <div class="row">
           <div class="col-lg-9">
-            <div class="chart">
-              <canvas id="myChart" aria-label="Site statistics" role="img"></canvas>
-            </div>
+           
             <div class="users-table table-wrapper">
               <table class="posts-table">
                 <thead>
@@ -318,12 +201,7 @@
             </div>
           </div>
           <div class="col-lg-3">
-            <article class="customers-wrapper">
-              <canvas id="customersChart" aria-label="Customers statistics" role="img"></canvas>
-              <!--              <p class="customers__title">New Customers <span>+958</span></p>
-              <p class="customers__date">28 Daily Avg.</p>
-              <picture><source srcset="./img/svg/customers.svg" type="image/webp"><img src="./img/svg/customers.svg" alt=""></picture> -->
-            </article>
+         
            
           </div>
         </div>
