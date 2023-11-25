@@ -50,20 +50,17 @@
                  
                     <a class="active" href="{{url('kelas')}}"><span class="icon image" aria-hidden="true"></span>Kelas</a>
                 </li>
+             
                 <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon paper" aria-hidden="true"></span>Data Spp
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
+                 
+                    <a class="active" href="{{url('spp')}}"><span class="icon image" aria-hidden="true"></span>Data Spp</a>
                 </li>
+             
             </ul>
             
             <ul class="sidebar-body-menu">
                 <li>
-                    <a href="{{url('transaksi')}}"><span class="icon edit" aria-hidden="true"></span>Transaksi</a>
+                    <a href="{{url('history')}}"><span class="icon edit" aria-hidden="true"></span>History</a>
                 </li>
                 <li>
                     {{-- <a class="show-cat-btn" href="##">

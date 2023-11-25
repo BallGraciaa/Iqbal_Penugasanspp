@@ -15,20 +15,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //admin
-//admin
 Route::get('/', function () {
     return view('admin.layoutadmin');
  });
-Route::get('petugas',[admin::class,'petugas']);
-Route::get('utama', [admin::class,'tampilanutm']);
-Route::get('datasiswa', [admin::class,'datasiswa']);
-Route::get('kelas', [admin::class,'kelas']);
-Route::post('kelas',[admin::class,'tambah']);
-Route::get('transaksi',[admin::class,'transaksi']);
+ //dashboard
+ Route::get('utama', [admin::class,'tampilanutm']);
+ Route::get('datasiswa', [admin::class,'datasiswa']);
 
+
+ Route::get('transaksi',[admin::class,'transaksi']);
+ //CRUD spp
+ Route::post('tambahSpp', [admin::class,'tambahSpp']);
+
+ //CRUD Kelas
+ Route::post('tambahKelas', [admin::class,'tambahKelas']);
+ 
+ //CRUD PETUGAS
+ Route::post('tambahPetugas', [admin::class,'tambahPetugas']);
+
+ //Tampil
+ Route::get('spp',[admin::class,'spp']);
+ Route::get('kelas',[admin::class,'kelas']);
+ Route::get('petugas',[admin::class,'petugas']);
+ Route::get('history',[admin::class,'history']);
  //siswa    
-Route::get('login',[siswa::class,'login']);
-Route::get('halutama', [siswa::class,'tampilantable']);
-Route::get('mahfud', [siswa::class, 'laporan']);
-Route::get('tambah', [siswa::class,'tambahh']);
-Route::post('tambah', [siswa::class,'tambah']);
+ Route::get('login',[siswa::class,'login']);
+ Route::get('halutama', [siswa::class,'tampilantable']);
+ Route::get('mahfud', [siswa::class, 'laporan']);
+ 
+ 

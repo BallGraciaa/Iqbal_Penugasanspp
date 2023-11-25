@@ -10,6 +10,7 @@
   <link rel="shortcut icon" href="assett/img/svg/logo.svg" type="image/x-icon">
   <!-- Custom styles -->
   <link rel="stylesheet" href="/assett/css/style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
   @yield('css')
 </head>
 
@@ -20,7 +21,7 @@
 <div class="page-flex">
   <!-- ! Sidebar -->
   <aside class="sidebar">
-    <div class="sidebar-start">
+    <div class="sidebar-start">     
         <div class="sidebar-head">
             <a href="/" class="logo-wrapper" title="Home">
                 <span class="sr-only">Home</span>
@@ -53,16 +54,11 @@
                     <a class="active" href="{{url('kelas')}}"><span class="icon image" aria-hidden="true"></span>Kelas</a>
                 </li>
                 <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon paper" aria-hidden="true"></span>Data Spp
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            {{-- <span class="icon arrow-down" aria-hidden="true"></span> --}}
-                        </span>
-                    </a>
+                    <a class="active" href="{{url('spp')}}"><span class="icon image" aria-hidden="true"></span>Data Spp</a>
                 </li>
+    
                 <li>
-                    <a class="active" href="{{url('transaksi')}}"><span class="icon image" aria-hidden="true"></span>Transaksi</a>
+                    <a class="active" href="{{url('history')}}"><span class="icon image" aria-hidden="true"></span>History</a>
                 </li>
             </ul>
             
