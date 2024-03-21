@@ -2,80 +2,72 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\buku;
+use App\Models\kategori;
 use App\Models\kelas;
 use App\Models\pembayaran;
 use App\Models\petugas;
 use App\Models\siswa;
 use App\Models\spp;
+use App\Models\ulasan_buku;
 use Illuminate\Http\Request;
 
 class admin extends Controller
-{
-    public function index(request $request){
-        return view("");
-    }
-    
-    public function tampilanutm()
-    {
-        $m = new pembayaran();
-        return view('admin.dashboard', ['wg' => $m->all()]);
-    }
-    
-    public function petugas(){
-        $ol = new petugas;
-        return view('admin.petugas',['ptg'=>$ol->all()]);
-    }  
-    
-
-    public function datasiswa(){
-        $lapor = new siswa;
-        return view('admin.datasiswa',['data'=>$lapor->all()]);
-    }  
-    
-    public function kelas(){
-        $lapor = new kelas ;
-        return view('admin.kelas',['data'=>$lapor->all()]);
+{  
+    public function bukuu(){
+        $lapor = new buku ;
+        return view('admin.buku',['data'=>$lapor->all()]);
     }   
     //logika kelas
-    public function tambahKelas(Request $request){
-        $i = new kelas();
-        $cek = $request->validate([
-            'nama_kelas'=> 'required|max:10',
-            'kompetensi_keahlian'=> 'required|max:35',
+    public function tambahbuku(Request $data){
+        $i = new buku();
+        $cek = $data->validate([
+            'Judul'=> 'required|max:100',
+            'Penulis'=> 'required|max:50',
+            'Penerbit'=> 'required|max:100',
+            'TahunTerbit'=> 'required|max:4',
+            'stok'=> 'required|max:200',
         ]);
-        $i->create($request->all());
-        return redirect('kelas')->with('pesan','data kelas berhasil dikirim');
+        $i->create($data->all());
+        return redirect('buku')->with('pesan','data kelas berhasil dikirim');
     }
 
-    public function spp(){
-        $spp = new spp ;
-        return view('admin.spp',['dataspp'=>$spp->all()]);
-    }   
-    public function tambahSpp(Request $request){
-        $e = new spp();
-        $cek = $request->validate([
-            'tahun'=> 'required|max:4',
-            'nominal'=> 'required|max:12',
-        ]);
-        $e->create($request->all());
-        return redirect('spp')->with('pesan','data kelas berhasil dikirim');
+    public function hapusbuku($id){
+        $el = buku::select('*')->where('BukuID',$id)->delete(); 
+        return back();
+    }
+     public function editbuku(Request $request, $data){
+            $iq = buku::where('BukuID',$data)->update([
+                'Judul' => $request->Judul,
+                'Penulis' => $request->Penulis,
+                'Penerbit' => $request->Penerbit,
+                'TahunTerbit' => $request->TahunTerbit,
+                'stok' => $request->stok
+            ]);
+            return redirect('buku');
+        }
+        public function login(){
+            return view('admin.signin');
+        }
+        public function regis(){
+            $lapor = new petugas ;
+            return view('admin.petugas',['ptg'=>$lapor->all()]);
+        }   
+        public function tambahadmin(Request $ptgs){
+            $i = new petugas();
+            $cek = $ptgs->validate([
+                'Username'=> 'required|max:100',
+                'Password'=> 'required|max:50',
+                'email'=> 'required|max:100',
+                'namaLengkap'=> 'required|max:100',
+                'level'=>'required|max:20'
+            ]);
+            $i->create($ptgs->all());
+            return redirect('registrasi')->with('pesan','data kelas berhasil dikirim');
+        }
+       
     }
 
-    public function tambahPetugas(Request $request){
-        $o = new petugas();
-        $cek = $request->validate([
-            'username'=> 'required|max:30',
-            'password'=> 'required|max:35',
-            'nama_petugas'=> 'required|max:50',
-        ]);    
-        $o->create($request->all());
-        return redirect('petugas')->with('pesan','data kelas berhasil dikirim');
-    }    
-
-    public function history()
-    {
-        $m = new pembayaran();
-        return view('admin.transaksi', ['wg' => $m->all()]);
-    }
   
-}
+
+

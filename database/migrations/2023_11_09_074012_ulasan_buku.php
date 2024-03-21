@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('spp',function(Blueprint $table){
-            $table->integer('id_spp')->autoIncrement();
-            $table->integer('tahun');
-            $table->integer('nominal');
-            $table->timestamps();
-      
+        Schema::create('ulasan_buku', function (Blueprint $ub) {
+            $ub->integer('UlasanID')->autoIncrement();
+            $ub->integer('UserID');
+            $ub->integer('BukuID');
+            $ub->string('Ulasan');
+            $ub->integer('rating');
+            $ub->timestamps();
         });
     }
 
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::drop('spp');
+        Schema::drop('ulasan_buku');
     }
 };

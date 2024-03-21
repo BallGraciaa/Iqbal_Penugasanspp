@@ -275,23 +275,24 @@
               <table class="posts-table">
                 <thead>
                     <tr class="users-table-info">
-                        <th>NIS</th>
-                        <th>TANGGAL BAYAR</th>
-                        <th>BULAN DIBAYAR</th>
-                        <th>TAHUN DIBAYAR</th>
-                        <th>ID SPP</th>
-                        <th>JUMLAH BAYAR</th>
+                      <th>Buku Id</th>
+                                <th>Judul</th>
+                                <th>Penulis</th>
+                                <th>Penerbit</th>
+                                <th>Tahun Terbit</th>
+                                <th>Stok</th>
+                                <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($wg as $inem)
+                    @foreach ($data as $item)
                         <tr>
-                            <td>{{ $inem->nis}}</td>
-                            <td>{{ $inem->tanggal_bayar}}</td>
-                            <td>{{ $inem->bulan_dibayar }}</td>
-                            <td>{{ $inem->tahun_dibayar }}</td>
-                            <td>{{ $inem->id_spp }}</td>
-                            <td>{{ $inem->jumlah_bayar }}</td>
+                          <td>{{ $item->BukuID }}</td>
+                                    <td>{{ $item->Judul }}</td>
+                                    <td>{{ $item->Penulis }}</td>
+                                    <td>{{ $item->Penerbit }}</td>
+                                    <td>{{ $item->TahunTerbit }}</td>
+                                    <td>{{ $item->stok }}</td>
                         </tr>
                     @endforeach
                 </tbody>

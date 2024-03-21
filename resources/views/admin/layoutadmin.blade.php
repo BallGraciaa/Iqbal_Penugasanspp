@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BallGraciaa SPP</title>
+  <title>All Perpus</title>
   <!-- Favicon -->
   <link rel="shortcut icon" href="assett/img/svg/logo.svg" type="image/x-icon">
   <!-- Custom styles -->
@@ -27,7 +27,7 @@
                 <span class="sr-only">Home</span>
                 <span class="icon logo" aria-hidden="true"></span>
                 <div class="logo-text">
-                    <span class="logo-title">BallGracia</span>
+                    <span class="logo-title">All Perpus</span>
                     <span class="logo-subtitle">Dashboard</span>
                 </div>
 
@@ -43,22 +43,12 @@
                     <a class="active" href="{{url('utama')}}"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
                 </li>
                 <li>
-                    <a class="active" href="{{url('datasiswa')}}"><span class="icon document" aria-hidden="true"></span>Data Siswa</a>
+                    <a class="active" href="{{url('buku')}}"><span class="icon document" aria-hidden="true"></span>Buku</a>
                 </li>
                 <li>  
                     <li>
-                        <a class="active" href="{{url('petugas')}}"><span class="icon folder" aria-hidden="true"></span>Data Petugas</a>
+                        <a class="active" href="{{url('petugas')}}"><span class="icon folder" aria-hidden="true"></span>Registrasi</a>
                     </li>
-                </li>
-                <li>
-                    <a class="active" href="{{url('kelas')}}"><span class="icon image" aria-hidden="true"></span>Kelas</a>
-                </li>
-                <li>
-                    <a class="active" href="{{url('spp')}}"><span class="icon image" aria-hidden="true"></span>Data Spp</a>
-                </li>
-    
-                <li>
-                    <a class="active" href="{{url('history')}}"><span class="icon image" aria-hidden="true"></span>History</a>
                 </li>
             </ul>
             

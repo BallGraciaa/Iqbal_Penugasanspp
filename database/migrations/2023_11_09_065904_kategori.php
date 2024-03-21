@@ -11,20 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kelas',function(Blueprint $table){
-            $table->integer('id_kelas')->autoIncrement();
-            $table->string('nama_kelas',10);
-            $table->string('kompetensi_keahlian',35);
-            $table->timestamps();
-         
+        Schema::create('kategori', function (Blueprint $kg) {
+            $kg->integer('KategoriID')->autoIncrement();
+            $kg->string('NamaKategori',255);
+            $kg->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::drop('kelas');
+        Schema::drop('kategori');
     }
 };

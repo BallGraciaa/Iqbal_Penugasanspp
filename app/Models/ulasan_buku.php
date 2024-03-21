@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class petugas extends Model
+class ulasan_buku extends Model
 {
     use HasFactory;
-    //set table
-    protected $table = 'petugas';
-    protected $primaryKey = 'petugasID';
+    protected $table = 'ulasan_buku';
+    protected $primaryKey = 'UlasanID';
     public $incrementing = true;
-    protected $guarded=['petugasID'];
+    protected $guarded = ['UlasanID'];
 }

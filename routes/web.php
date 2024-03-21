@@ -19,24 +19,25 @@ Route::get('/', function () {
     return view('admin.layoutadmin');
  });
  //dashboard
- Route::get('utama', [admin::class,'tampilanutm']);
- Route::get('datasiswa', [admin::class,'datasiswa']);
-
-
- Route::get('transaksi',[admin::class,'transaksi']);
+ Route::get('admindash', [admin::class,'index']);
+ 
+ 
  //CRUD spp
  Route::post('tambahSpp', [admin::class,'tambahSpp']);
+ 
 
- //CRUD Kelas
- Route::post('tambahKelas', [admin::class,'tambahKelas']);
+ //CRUD buku
+ Route::post('tambahbuku', [admin::class,'tambahbuku']);
+ Route::get('hapusbuku/{id}',[admin::class,'hapusbuku']);
+ 
  
  //CRUD PETUGAS
  Route::post('tambahPetugas', [admin::class,'tambahPetugas']);
 
  //Tampil
  Route::get('spp',[admin::class,'spp']);
- Route::get('kelas',[admin::class,'kelas']);
- Route::get('petugas',[admin::class,'petugas']);
+ Route::get('buku',[admin::class,'bukuu']);
+ Route::get('petugas',[admin::class,'regis']);
  Route::get('history',[admin::class,'history']);
  //siswa    
  Route::get('login',[siswa::class,'login']);

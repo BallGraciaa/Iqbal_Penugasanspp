@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('petugas',function(Blueprint $table){
-            $table->integer('id_petugas')->autoIncrement();
-            $table->string('username',25);
-            $table->string('password',35);
-            $table->string('nama_petugas',35);
+        Schema::create('petugas', function (Blueprint $table) {
+            $table->id('petugasID')->autoIncrement();
+            $table->string('username', 255);
+            $table->string('password', 255);
+            $table->string('email', 255);
+            $table->string('namaLengkap');
             $table->enum('level',['admin','petugas']);
+            $table->string('alamat');
             $table->timestamps();
-           
         });
     }
 

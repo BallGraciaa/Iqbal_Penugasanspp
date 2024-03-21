@@ -36,12 +36,16 @@
                             <input type="text" class="form-control" name="password" id="password" placeholder="Tambahkan Password">
                             </div>
                             <div class="mb-3 row">
-                            <label for="" class="form-label">Nama Petugas</label>
-                            <input type="text" class="form-control" name="nama_petugas" id="nama_petugas" placeholder="Tambahkan Nama Petugas">
+                            <label for="" class="form-label">Email</label>
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Tambahkan Email Petugas">
+                            </div>
+                            <div class="mb-3 row">
+                            <label for="" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" name="namaLengkap" id="namaLengkap" placeholder="Tambahkan Nama Lengkap">
                             </div>
                             <div class="mb-3 row">
                             <label for="" class="form-label">Level</label>
-                            <input type="text" class="form-control" name="level" id="level" placeholder="Tambahkan Password">
+                            <input type="text" class="form-control" name="level" id="level" placeholder="Tambahkan Level">
                             </div>
                             
                             <div class="mb-3">

@@ -11,23 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('siswa',function(Blueprint $table){
-            $table->string('nisn',10);
-            $table->string('nis',8);
-            $table->string('nama',35);
-            $table->integer('id_kelas');
-            $table->text('alamat');
-            $table->string('no_telp',13);
-            $table->integer('id_spp');
+        Schema::create('kategori_relasi', function (Blueprint $table) {
+            $table->integer('KategoriBukuID')->autoIncrement;
+            $table->integer('BukuID');
+            $table->integer('KategoriID');
             $table->timestamps();
-           
         });
     }
+
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::drop('siswa');
+        Schema::drop('kategori_relasi');
     }
 };
